@@ -17,6 +17,4 @@ class PokimonRepository @Inject constructor(private val apiService: PokimonApiSe
             emit(Either.Left(ioException.localizedMessage))
         }
     }
-
-
 }
