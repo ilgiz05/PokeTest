@@ -44,7 +44,8 @@ class PokemonFragment :
 
                 is Either.Right -> {
                     Log.e("Anime", it.value.toString())
-                    pokemon.submitList(it.value)
+                    pokemon.submitList(it.value?.results)
+
                 }
             }
         }
