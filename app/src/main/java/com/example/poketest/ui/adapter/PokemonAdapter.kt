@@ -26,6 +26,7 @@ class PokemonAdapter(
         holder.onBind(getItem(position))
     }
 
+
     inner class ViewHolder(
         private val binding: ItemPokemonBinding
     ) : RecyclerView.ViewHolder(binding.root) {
@@ -46,7 +47,7 @@ class PokemonAdapter(
                     oldItem: PokimonsModel,
                     newItem: PokimonsModel
                 ): Boolean {
-                    return oldItem.id === newItem.id
+                    return oldItem.id == newItem.id
                 }
 
                 @SuppressLint("DiffUtilEquals")
@@ -54,7 +55,7 @@ class PokemonAdapter(
                     oldItem: PokimonsModel,
                     newItem: PokimonsModel
                 ): Boolean {
-                    return oldItem === newItem
+                    return oldItem == newItem
                 }
             }
     }
